@@ -36,6 +36,9 @@ $(document).ready(function(){
             //jsonpCallback: 'callback', // this is not relevant to the POST anymore
             success: function (data) {
                 console.log('process sucess : ', data);
+            },
+            complete: function(data){
+                $('#connectKids').modal('hide');
             }
 
         });
