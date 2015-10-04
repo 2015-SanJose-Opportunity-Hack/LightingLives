@@ -29,6 +29,14 @@
             <label for="donor">Donor:</label>
             <input type="donor" class="form-control" id="donor" placeholder="Enter name of the donor">
         </div>
+        <div class="form-group">
+            <label for="picNote">Description:</label>
+            <input type="picNote" class="form-control" id="picNote" placeholder="Enter Description of the Picture">
+        </div>
+        <div class="form-group">
+            <label for="picDate">Enter the Date of the Pic</label>
+            <input type="picDate" class="form-control" id="picDate" placeholder="MM-DD-YYYY">
+        </div>
 
         <span class="btn btn-default btn-file">
                  <input type="file">
@@ -86,6 +94,8 @@
         var region = $("#region").val();
         var note = $("#biography").val();
         var donor = $("#donor").val();
+        var picDate = $("#picDate").val();
+        var picNote = $("#picNote").val();
         //var data = $( this ).serializeArray();
 
             $.ajax({
@@ -101,18 +111,8 @@
                     "timeline": [
                         {
                             "picture": "pic1",
-                            "date": "09-01-2015",
-                            "note": "graduation"
-                        },
-                        {
-                            "picture": "pic2",
-                            "date": "10-01-2015",
-                            "note": "high school"
-                        },
-                        {
-                            "picture": "pic3",
-                            "date": "11-01-2015",
-                            "note": "elementary"
+                            "date": picDate,
+                            "note": picNote
                         }
                     ]
                 },

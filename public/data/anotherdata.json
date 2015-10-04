@@ -1,57 +1,57 @@
 {
   "nodes": [{
     "name": "root",
-    "index":"0",
+    "label":"root",
     "image": "/img/sun.png",
     "group": 1
   }, {
     "name": "region1",
-    "index": "1",
+    "label": "s1",
     "image": "/img/house.png",
     "group": 2
   },{
     "name": "kids1",
-    "label": "2",
+    "label": "s2",
     "image": "/img/star.gif",
     "group": 3
   }, {
     "name": "kids2",
-    "label": "3",
+    "label": "s3",
     "image": "/img/star.gif",
     "group": 3
   }, {
     "name": "region2",
-    "label": "4",
+    "label": "s4",
     "image": "/img/house.png",
     "group": 4
   }, {
     "name": "kids3",
-    "label": "5",
+    "label": "s5",
     "image": "/img/star.gif",
     "group": 5
   }, {
     "name": "kids4",
-    "label": "6",
+    "label": "s6",
     "image": "/img/star.gif",
     "group": 5
   }, {
     "name": "region3",
-    "label": "7",
+    "label": "s7",
     "image": "/img/house.png",
     "group": 6
   }, {
     "name": "kids5",
-    "label": "8",
+    "label": "s8",
     "image": "/img/star.gif",
     "group": 7
   }, {
     "name": "kids6",
-    "label": "9",
+    "label": "s9",
     "image": "/img/star.gif",
     "group": 7
   }, {
     "name": "kids7",
-    "label": "10",
+    "label": "s10",
     "image": "/img/star.gif",
     "group": 7
   }],
