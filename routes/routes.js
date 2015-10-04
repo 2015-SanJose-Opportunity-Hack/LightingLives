@@ -46,15 +46,43 @@ exports.findKids = function(req, res) {
    });
 };
 exports.insertKids = function(req, res) {
-    console.log('nitain');
-    var cursor =db.collection('donors').find();
-    cursor.each(function(err, doc) {
-        if (doc != null) {
-            res.writeHead(200, { "Content-Type": "application/json" });
-            //var response = {'x':'2'};
-            res.end(JSON.stringify(doc));
-        }
-    });
+    console.log('ajax call')
+//    var data = {
+//        "_id": "kid5",
+//        "name": "kid1",
+//        "region": "NA",
+//        "donors": [
+//            {
+//                "donor": "rakesh"
+//            },
+//            {
+//                "donor": "nitish"
+//            }
+//        ],
+//        "timeline": [
+//            {
+//                "picture": "pic1",
+//                "date": "09-01-2015",
+//                "note": "graduation"
+//            },
+//            {
+//                "picture": "pic2",
+//                "date": "10-01-2015",
+//                "note": "high school"
+//            },
+//            {
+//                "picture": "pic3",
+//                "date": "11-01-2015",
+//                "note": "elementary"
+//            }
+//        ]
+//    }
+    console.log('ajax call request : ',req.body)
+    console.log('insertKids');
+//    db.collection('kids').save(data,function(error, docs){
+//        res.redirect('/')
+//    });
+//
 
 
 };

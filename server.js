@@ -10,6 +10,7 @@ var multer = require('multer');
 var errorHandler = require('errorhandler');
 var findDonor = require('./routes/routes').findDonor;
 var findKids = require('./routes/routes').findKids;
+var insertKids = require('./routes/routes').insertKids;
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/findDonor',  findDonor);
 app.get('/timeline',  findKids);
+app.post('/insertKids',  insertKids);
 
 
 var server = http.createServer(app);
