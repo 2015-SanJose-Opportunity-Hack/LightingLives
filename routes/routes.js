@@ -181,13 +181,37 @@ exports.insertKids = function(req, res) {
 
             var regionIndex = 0;
 
+
             for(var i = 0 ; i < nodes.length; i++){
                 if(nodes[i].name == req.body.region){
                     regionIndex = nodes[i].label;
                 }
             }
+            if(regionIndex === 0){
+                //nodeSize += 1;
+                regionIndex = nodeSize;
+                nodeSize += 1;
+                console.log("region index : ", regionIndex);
+                console.log("nodes size :", nodeSize);
+                console.log("creating new region :", req.body.region);   
+                db.collection('donors').update({}, {
+                    $addToSet:{
+                        nodes : {
+                            "name": req.body.region,
+                            "label": regionIndex,
+                            "image": "/img/house.png",
+                            "group": 7
+                        },
+                        links : {
+                            "source": 0,
+                            "target": regionIndex,
+                            "value": 1
+                        }
+                    }
+                });
+            }
 
-            var kidIndex = nodeSize + 1;
+            var kidIndex = nodeSize;
 
             //res.writeHead(200, { "Content-Type": "application/json" });
             //var response = {'x':'2'};
