@@ -5,7 +5,7 @@
 
 
 var container = document.getElementById('visualization');
-d3.json("/timeline", function(error, data) {
+d3.json("/timeline?name=kid4", function(error, data) {
     console.log(data);
     handleResponse(data.timeline);
 });

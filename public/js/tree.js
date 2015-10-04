@@ -64,7 +64,7 @@ d3.json('/findDonor', function(err, graph){
         })
         .on("click", function(d) {
             if(d.label!=='root') {
-                window.location.replace("http://localhost:3000/timeline.html?_id="+d.name);
+                window.location.replace("http://localhost:3000/timeline.html?name="+d.name);
             }
         });
 

@@ -14,6 +14,7 @@ db.open(function(err, db) {
         console.log("Connected to 'hackdb' database");
         db.collection('donors', {safe:true}, function(err, collection) {
             populateDB();
+            populateKidsDB();
             if (err) {
                 console.log("The collection doesn't exist. Creating it with sample data...");
 
@@ -27,10 +28,147 @@ var cleanDB = function(){
     db.collection('donors', function (err, collection) {
         collection.remove({}, {safe:true}, function(err, result){});
     });
+    db.collection('kids', function (err, collection) {
+        collection.remove({}, {safe:true}, function(err, result){});
+    });
 
 
 };
 
+var populateKidsDB = function(){
+    var kids = [
+  {
+    "_id": "kid1",
+    "name": "kid1",
+    "region": "region4",
+    "donors": [
+      {
+        "donor": "root"
+      }
+    ],
+    "timeline": [
+      {
+        "picture": "images/Graduation_8.jpg",
+        "date": "10-01-2015",
+        "note": "highSchoolGraduation"
+      }
+    ]
+  },
+  {
+    "_id": "kid2",
+    "name": "kid2",
+    "region": "region4",
+    "donors": [
+      {
+        "donor": "root"
+      }
+    ],
+    "timeline": [
+      {
+        "picture": "images/Graduation_10.jpg",
+        "date": "10-01-2012",
+        "note": "Graduation"
+      }
+    ]
+  },
+  {
+    "_id": "kid3",
+    "name": "kid3",
+    "region": "region4",
+    "donors": [
+      {
+        "donor": "root"
+      }
+    ],
+    "timeline": [
+      {
+        "picture": "images/Graduation_11.jpg",
+        "date": "10-01-2013",
+        "note": "Party"
+      }
+    ]
+  },
+  {
+    "_id": "kid4",
+    "name": "kid4",
+    "region": "region4",
+    "donors": [
+      {
+        "donor": "root"
+      }
+    ],
+    "timeline": [
+      {
+        "picture": ["/images/Graduation_8.jpg","/images/Graduation_9.jpg","/images/Graduation_10.jpg"],
+        "date": "10-01-2014",
+        "note": "Eevent1"
+      },{
+        "picture": ["/images/Graduation_8.jpg","/images/Graduation_9.jpg","/images/Graduation_10.jpg"],
+        "date": "10-01-2013",
+        "note": "Event2"
+      },{
+        "picture": ["/images/Graduation_8.jpg","/images/Graduation_9.jpg","/images/Graduation_10.jpg"],
+        "date": "10-01-2015",
+        "note": "Event2"
+      }
+    ]
+  },
+  {
+    "_id": "kid5",
+    "name": "kid5",
+    "region": "region4",
+    "donors": [
+      {
+        "donor": "root"
+      }
+    ],
+    "timeline": [
+      {
+        "picture": "images/Graduation_9.jpg",
+        "date": "10-01-2011",
+        "note": "Event2"
+      }
+    ]
+  },
+  {
+    "_id": "kid6",
+    "name": "kid6",
+    "region": "region4",
+    "donors": [
+      {
+        "donor": "root"
+      }
+    ],
+    "timeline": [
+      {
+        "picture": "images/Graduation_9.jpg",
+        "date": "10-01-2012",
+        "note": "Party"
+      }
+    ]
+  },
+  {
+    "_id": "kid7",
+    "name": "kid7",
+    "region": "region4",
+    "donors": [
+      {
+        "donor": "root"
+      }
+    ],
+    "timeline": [
+      {
+        "picture": "images/Graduation_11.jpg",
+        "date": "10-01-2013",
+        "note": "Graduation"
+      }
+    ]
+  }
+];
+db.collection('kids', function (err, collection) {
+        collection.insert(kids, {safe:true}, function(err, result){});
+    });
+}
 
 var populateDB = function () {
     console.log('populateDB');
@@ -164,8 +302,8 @@ exports.findDonor = function(req, res) {
 };
 
 exports.findKids = function(req, res) {
-    console.log('findKids : ', req.param('child'));
-    var cursor =db.collection('kids').find({"_id": req.param('child')});
+    console.log('findKids : ', req.param('name'));
+    var cursor =db.collection('kids').find({"_id": req.param('name')});
     cursor.each(function(err, doc) {
         if (doc != null) {
             console.log(JSON.stringify(doc));
