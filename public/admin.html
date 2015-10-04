@@ -12,22 +12,22 @@
 
 <div class="container">
     <h2>Enter the kid information</h2>
-    <form role="form">
+    <form role="form" id="submitKids" class="kidsData">
         <div class="form-group">
-            <label for="email">Name:</label>
-            <input type="email" class="form-control" id="name" placeholder="Enter name">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
         </div>
         <div class="form-group">
             <label for="biography">Biography:</label>
-            <input type="password" class="form-control" id="biography" placeholder="Enter biography">
+            <input type="text" class="form-control" id="biography" placeholder="Enter biography">
         </div>
         <div class="form-group">
-            <label for="email">Region:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter region">
+            <label for="region">Region:</label>
+            <input type="text" class="form-control" id="region" placeholder="Enter region">
         </div>
         <div class="form-group">
-            <label for="email">Donor:</label>
-            <input type="email" class="form-control" id="donor" placeholder="Enter name of the donor">
+            <label for="donor">Donor:</label>
+            <input type="donor" class="form-control" id="donor" placeholder="Enter name of the donor">
         </div>
 
         <span class="btn btn-default btn-file">
@@ -76,26 +76,26 @@
 //    }
 
 
-$(document).ready(function(){
-    $("#submit").click(function(){
+//$(document).ready(function(){
+    $("#submitKids").submit(function(e){
+        //console.log( "submit :", $( this ).serializeArray() );
+        e.preventDefault();
+        console.log("rakesh");
         var name = $("#name").val();
+        console.log("name :", name);
         var region = $("#region").val();
         var note = $("#biography").val();
         var donor = $("#donor").val();
-
-
+        //var data = $( this ).serializeArray();
 
             $.ajax({
                 data: {
-                    "_id": "kid5",
-                    "name": "kid1",
-                    "region": "NA",
+                    "_id": name,
+                    "name": name,
+                    "region": region,
                     "donors": [
                         {
-                            "donor": "rakesh"
-                        },
-                        {
-                            "donor": "nitish"
+                            "donor": donor
                         }
                     ],
                     "timeline": [
@@ -121,11 +121,11 @@ $(document).ready(function(){
                 dataType: 'json',
                 //jsonpCallback: 'callback', // this is not relevant to the POST anymore
                 success: function (data) {
-                    console.log('process sucess');
+                    console.log('process sucess : ', data);
                 }
 
             });
     });
-});
+//});
 
 </script>
