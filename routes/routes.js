@@ -12,15 +12,123 @@ db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'hackdb' database");
         db.collection('donors', {safe:true}, function(err, collection) {
+            populateDB();
             if (err) {
                 console.log("The collection doesn't exist. Creating it with sample data...");
-                //populateDB();
+
             }
         });
     }
 });
 
+var populateDB = function () {
+    console.log('populateDB');
+    var donor = [
+    {
+        "nodes": [{
+        "name": "root",
+        "label":"root",
+        "image": "/img/sun.png",
+        "group": 1
+    }, {
+        "name": "region1",
+        "label": "s1",
+        "image": "/img/house.png",
+        "group": 2
+    },{
+        "name": "kids1",
+        "label": "s2",
+        "image": "/img/star.gif",
+        "group": 3
+    }, {
+        "name": "kids2",
+        "label": "s3",
+        "image": "/img/star.gif",
+        "group": 3
+    }, {
+        "name": "region2",
+        "label": "s4",
+        "image": "/img/house.png",
+        "group": 4
+    }, {
+        "name": "kids3",
+        "label": "s5",
+        "image": "/img/star.gif",
+        "group": 5
+    }, {
+        "name": "kids4",
+        "label": "s6",
+        "image": "/img/star.gif",
+        "group": 5
+    }, {
+        "name": "region3",
+        "label": "s7",
+        "image": "/img/house.png",
+        "group": 6
+    }, {
+        "name": "kids5",
+        "label": "s8",
+        "image": "/img/star.gif",
+        "group": 7
+    }, {
+        "name": "kids6",
+        "label": "s9",
+        "image": "/img/star.gif",
+        "group": 7
+    }, {
+        "name": "kids7",
+        "label": "s10",
+        "image": "/img/star.gif",
+        "group": 7
+    }],
+        "links": [{
+        "source": 0,
+        "target": 1,
+        "value": 1
+    }, {
+        "source": 1,
+        "target": 2,
+        "value": 1
+    }, {
+        "source": 1,
+        "target": 3,
+        "value": 1
+    }, {
+        "source": 0,
+        "target": 4,
+        "value": 1
+    }, {
+        "source": 4,
+        "target": 5,
+        "value": 1
+    }, {
+        "source": 4,
+        "target": 6,
+        "value": 1
+    }, {
+        "source": 0,
+        "target": 7,
+        "value": 1
+    }, {
+        "source": 7,
+        "target": 8,
+        "value": 1
+    }, {
+        "source": 7,
+        "target": 9,
+        "value": 1
+    }, {
+        "source": 7,
+        "target": 10,
+        "value": 1
+    }]
+    }
+   ];
 
+    db.collection('donors', function (err, collection) {
+        collection.insert(donor, {safe:true}, function(err, result){});
+    });
+};
 
 exports.findDonor = function(req, res) {
     console.log('nitain');
