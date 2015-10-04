@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var errorHandler = require('errorhandler');
 var findDonor = require('./routes/routes').findDonor;
+var findKids = require('./routes/routes').findKids;
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(multer());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/findDonor',  findDonor);
+app.get('/timeline',  findKids);
 
 
 var server = http.createServer(app);
