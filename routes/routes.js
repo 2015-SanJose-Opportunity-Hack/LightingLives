@@ -9,6 +9,7 @@ var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('hackdb', server, {safe: true});
 
 db.open(function(err, db) {
+    cleanDB();
     if(!err) {
         console.log("Connected to 'hackdb' database");
         db.collection('donors', {safe:true}, function(err, collection) {
@@ -21,108 +22,118 @@ db.open(function(err, db) {
     }
 });
 
+var cleanDB = function(){
+    console.log('cleanDB');
+    db.collection('donors', function (err, collection) {
+        collection.remove({}, {safe:true}, function(err, result){});
+    });
+
+
+};
+
+
 var populateDB = function () {
     console.log('populateDB');
     var donor = [
-    {
-        "nodes": [{
-        "name": "root",
-        "label":"root",
-        "image": "/img/sun.png",
-        "group": 1
-    }, {
-        "name": "region1",
-        "label": "s1",
-        "image": "/img/house.png",
-        "group": 2
-    },{
-        "name": "kids1",
-        "label": "s2",
-        "image": "/img/star.gif",
-        "group": 3
-    }, {
-        "name": "kids2",
-        "label": "s3",
-        "image": "/img/star.gif",
-        "group": 3
-    }, {
-        "name": "region2",
-        "label": "s4",
-        "image": "/img/house.png",
-        "group": 4
-    }, {
-        "name": "kids3",
-        "label": "s5",
-        "image": "/img/star.gif",
-        "group": 5
-    }, {
-        "name": "kids4",
-        "label": "s6",
-        "image": "/img/star.gif",
-        "group": 5
-    }, {
-        "name": "region3",
-        "label": "s7",
-        "image": "/img/house.png",
-        "group": 6
-    }, {
-        "name": "kids5",
-        "label": "s8",
-        "image": "/img/star.gif",
-        "group": 7
-    }, {
-        "name": "kids6",
-        "label": "s9",
-        "image": "/img/star.gif",
-        "group": 7
-    }, {
-        "name": "kids7",
-        "label": "s10",
-        "image": "/img/star.gif",
-        "group": 7
-    }],
-        "links": [{
-        "source": 0,
-        "target": 1,
-        "value": 1
-    }, {
-        "source": 1,
-        "target": 2,
-        "value": 1
-    }, {
-        "source": 1,
-        "target": 3,
-        "value": 1
-    }, {
-        "source": 0,
-        "target": 4,
-        "value": 1
-    }, {
-        "source": 4,
-        "target": 5,
-        "value": 1
-    }, {
-        "source": 4,
-        "target": 6,
-        "value": 1
-    }, {
-        "source": 0,
-        "target": 7,
-        "value": 1
-    }, {
-        "source": 7,
-        "target": 8,
-        "value": 1
-    }, {
-        "source": 7,
-        "target": 9,
-        "value": 1
-    }, {
-        "source": 7,
-        "target": 10,
-        "value": 1
-    }]
-    }
+        {
+            "nodes": [{
+                "name": "root",
+                "label":"root",
+                "image": "/img/sun.png",
+                "group": 1
+            }, {
+                "name": "region1",
+                "label": "1",
+                "image": "/img/house.png",
+                "group": 2
+            },{
+                "name": "kids1",
+                "label": "2",
+                "image": "/img/star.gif",
+                "group": 3
+            }, {
+                "name": "kids2",
+                "label": "3",
+                "image": "/img/star.gif",
+                "group": 3
+            }, {
+                "name": "region2",
+                "label": "4",
+                "image": "/img/house.png",
+                "group": 4
+            }, {
+                "name": "kids3",
+                "label": "5",
+                "image": "/img/star.gif",
+                "group": 5
+            }, {
+                "name": "kids4",
+                "label": "6",
+                "image": "/img/star.gif",
+                "group": 5
+            }, {
+                "name": "region3",
+                "label": "7",
+                "image": "/img/house.png",
+                "group": 6
+            }, {
+                "name": "kids5",
+                "label": "8",
+                "image": "/img/star.gif",
+                "group": 7
+            }, {
+                "name": "kids6",
+                "label": "9",
+                "image": "/img/star.gif",
+                "group": 7
+            }, {
+                "name": "kids7",
+                "label": "10",
+                "image": "/img/star.gif",
+                "group": 7
+            }],
+            "links": [{
+                "source": 0,
+                "target": 1,
+                "value": 1
+            }, {
+                "source": 1,
+                "target": 2,
+                "value": 1
+            }, {
+                "source": 1,
+                "target": 3,
+                "value": 1
+            }, {
+                "source": 0,
+                "target": 4,
+                "value": 1
+            }, {
+                "source": 4,
+                "target": 5,
+                "value": 1
+            }, {
+                "source": 4,
+                "target": 6,
+                "value": 1
+            }, {
+                "source": 0,
+                "target": 7,
+                "value": 1
+            }, {
+                "source": 7,
+                "target": 8,
+                "value": 1
+            }, {
+                "source": 7,
+                "target": 9,
+                "value": 1
+            }, {
+                "source": 7,
+                "target": 10,
+                "value": 1
+            }]
+        }
    ];
 
     db.collection('donors', function (err, collection) {
