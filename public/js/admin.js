@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#submitKids").submit(function(e){
+    $("#submitKidsForm").submit(function(e){
         //console.log( "submit :", $( this ).serializeArray() );
         e.preventDefault();
         console.log("rakesh");
@@ -36,6 +36,9 @@ $(document).ready(function(){
             //jsonpCallback: 'callback', // this is not relevant to the POST anymore
             success: function (data) {
                 console.log('process sucess : ', data);
+            },
+            complete: function(data){
+                $('#connectKids').modal('hide');
             }
 
         });
