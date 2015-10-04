@@ -54,12 +54,17 @@ d3.json('/data/anotherdata.json', function(err, graph){
         .on("mouseover", function(d){
             if(d.label!=='root'){
                 $(".details img").attr("src", "/img/rounded_corners.png");
-                $(".details h1").text("hello");
+                $(".details h1").text("Hello");
             }
         }).on("mouseout", function(d){
             if(d.label!=='root') {
                 $(".details img").attr("src", "/img/tt.png");
                 $(".details h1").text("");
+            }
+        })
+        .on("click", function(d) {
+            if(d.label!=='root') {
+                window.location.replace("http://localhost:3000/timeline.html?_id="+d.name);
             }
         });
 
