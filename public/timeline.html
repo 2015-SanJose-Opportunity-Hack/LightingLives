@@ -22,7 +22,9 @@
   
   
 </div>
-<div class="activity"></div>
+<div class="activity">
+
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -51,11 +53,15 @@ function handleResponse(data){
   var timeline = new vis.Timeline(container, items, options);
   timeline.on('click', function(properties){
 
+      if($('.activity').children('active')){
+          $('div.active').remove();
+      }
+
      //alert('clicked items: ' + JSON.stringify(properties));
     console.log("properties :" , JSON.stringify(properties));
     console.log(JSON.stringify(data[properties.item]));
     console.log(data[properties.item].picture);
-    $('.activity').append("<img id='theImg' src='data[properties.item].picture'/>");
+    $('.activity').append("<div class='active'><img id='theImg' src='data[properties.item].picture'/></div>");
 
 
   });
