@@ -1,0 +1,50 @@
+body {
+    background-image: url('/img/nightysky.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-color: #003366;
+}
+
+
+.navbar {
+    background-color: #003366;
+    border-color: #003366;
+}
+
+.row {
+    margin-left: -55px;
+    margin-right: -55px;
+
+}
+
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node {
+    font: 10px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #999;
+    stroke-width: 1.5px;
+}
+
+.node:not(:hover) .nodetext {
+    display: none;
+    color: #000;
+}
+
+.details img {
+    width: 200px;
+    height: 200px;
+    border-image-width: 0;
+}
+.details h1{
+    color: #ffffff;
+}
