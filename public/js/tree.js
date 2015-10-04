@@ -1,3 +1,6 @@
+/**
+ * Created by zchen8 on 10/4/15.
+ */
 //Constants for the SVG
 var width = 600,
     height = 600;
@@ -17,7 +20,7 @@ var svg = d3.select(".svg_graph").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-//Read the data from the mis element 
+//Read the data from the mis element
 
 d3.json('/data/anotherdata.json', function(err, graph){
 //Creates the graph data structure out of the json data

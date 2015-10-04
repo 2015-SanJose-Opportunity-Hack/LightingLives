@@ -1,106 +1,27 @@
 {
-  "name": "root",
-  "image": "/img/wula.png",
-  "children": [
+  "_id": "kid3",
+  "name": "kid3",
+  "region": "NA",
+  "donors": [
     {
-      "name": "region1",
-      "image": "/img/wula.png",
-      "children": [
-        {
-          "name": "kids1",
-          "image": "/img/wula.png",
-          "size": 1116
-        },
-        {
-          "name": "kids2",
-          "image": "/img/wula.png",
-          "size": 1116
-        },
-        {
-          "name": "kids3",
-          "image": "/img/wula.png",
-          "size": 1116
-        }
-      ]
+      "donor": "nitish"
+    }
+  ],
+  "timeline": [
+    {
+      "picture": "pic1",
+      "date": "09-01-2015",
+      "note": "graduation"
     },
     {
-      "name": "region2",
-      "image": "/img/wula.png",
-      "children": [
-        {
-          "name": "kids1",
-          "image": "/img/wula.png",
-          "size": 1116
-        },
-        {
-          "name": "kids2",
-          "size": 1116
-        },
-        {
-          "name": "kids3",
-          "image": "/img/wula.png",
-          "size": 1116
-        }
-      ]
+      "picture": "pic2",
+      "date": "10-01-2015",
+      "note": "elementary"
     },
     {
-      "name": "region3",
-      "image": "/img/wula.png",
-      "children": [
-        {
-          "name": "kids1",
-          "size": 1116
-        },
-        {
-          "name": "kids2",
-          "size": 1116
-        },
-        {
-          "name": "kids3",
-          "image": "/img/wula.png",
-          "size": 1116
-        }
-      ]
-    },
-    {
-      "name": "region4",
-      "image": "/img/wula.png",
-      "children": [
-        {
-          "name": "kids1",
-          "image": "/img/wula.png",
-          "size": 1116
-        },
-        {
-          "name": "kids2",
-          "size": 1116
-        },
-        {
-          "name": "kids3",
-          "image": "/img/wula.png",
-          "size": 1116
-        }
-      ]
-    },
-    {
-      "name": "region5",
-      "image": "/img/wula.png",
-      "children": [
-        {
-          "name": "kids1",
-          "image": "/img/wula.png",
-          "size": 1116
-        },
-        {
-          "name": "kids2",
-          "size": 1116
-        },
-        {
-          "name": "kids3",
-          "image": "/img/wula.png",
-          "size": 1116
-        }
-      ]
+      "picture": "pic3",
+      "date": "11-01-2015",
+      "note": "elementary"
     }
   ]
 }
