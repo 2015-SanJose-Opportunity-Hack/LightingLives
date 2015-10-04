@@ -45,51 +45,61 @@ var populateDB = function () {
                 "name": "region1",
                 "label": "1",
                 "image": "/img/house.png",
+                "hover_image": "/images/region1.png",
                 "group": 2
             },{
-                "name": "kids1",
+                "name": "kid1",
                 "label": "2",
                 "image": "/img/star.gif",
+                "hover_image": "images/kid1.png",
                 "group": 3
             }, {
-                "name": "kids2",
+                "name": "kid2",
                 "label": "3",
                 "image": "/img/star.gif",
+                "hover_image": "images/kid2.png",
                 "group": 3
             }, {
                 "name": "region2",
                 "label": "4",
                 "image": "/img/house.png",
+                "hover_image": "/images/region2.png",
                 "group": 4
             }, {
-                "name": "kids3",
+                "name": "kid3",
                 "label": "5",
                 "image": "/img/star.gif",
+                "hover_image": "images/kid3.png",
                 "group": 5
             }, {
-                "name": "kids4",
+                "name": "kid4",
                 "label": "6",
                 "image": "/img/star.gif",
+                "hover_image": "images/kid4.png",
                 "group": 5
             }, {
                 "name": "region3",
                 "label": "7",
                 "image": "/img/house.png",
+                "hover_image": "/images/region3.png",
                 "group": 6
             }, {
-                "name": "kids5",
+                "name": "kid5",
                 "label": "8",
                 "image": "/img/star.gif",
+                "hover_image": "images/kid5.png",
                 "group": 7
             }, {
-                "name": "kids6",
+                "name": "kid6",
                 "label": "9",
                 "image": "/img/star.gif",
+                "hover_image": "images/kid6.png",
                 "group": 7
             }, {
-                "name": "kids7",
+                "name": "kid7",
                 "label": "10",
                 "image": "/img/star.gif",
+                "hover_image": "images/kid7.png",
                 "group": 7
             }],
             "links": [{
