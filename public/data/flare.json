@@ -1,0 +1,106 @@
+{
+  "name": "root",
+  "image": "/img/wula.png",
+  "children": [
+    {
+      "name": "region1",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "image": "/img/wula.png",
+          "size": 1116
+        },
+        {
+          "name": "kids2",
+          "image": "/img/wula.png",
+          "size": 1116
+        },
+        {
+          "name": "kids3",
+          "image": "/img/wula.png",
+          "size": 1116
+        }
+      ]
+    },
+    {
+      "name": "region2",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "image": "/img/wula.png",
+          "size": 1116
+        },
+        {
+          "name": "kids2",
+          "size": 1116
+        },
+        {
+          "name": "kids3",
+          "image": "/img/wula.png",
+          "size": 1116
+        }
+      ]
+    },
+    {
+      "name": "region3",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "size": 1116
+        },
+        {
+          "name": "kids2",
+          "size": 1116
+        },
+        {
+          "name": "kids3",
+          "image": "/img/wula.png",
+          "size": 1116
+        }
+      ]
+    },
+    {
+      "name": "region4",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "image": "/img/wula.png",
+          "size": 1116
+        },
+        {
+          "name": "kids2",
+          "size": 1116
+        },
+        {
+          "name": "kids3",
+          "image": "/img/wula.png",
+          "size": 1116
+        }
+      ]
+    },
+    {
+      "name": "region5",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "image": "/img/wula.png",
+          "size": 1116
+        },
+        {
+          "name": "kids2",
+          "size": 1116
+        },
+        {
+          "name": "kids3",
+          "image": "/img/wula.png",
+          "size": 1116
+        }
+      ]
+    }
+  ]
+}
