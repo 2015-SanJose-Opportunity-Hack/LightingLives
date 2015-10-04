@@ -2,8 +2,10 @@
  * Created by zchen8 on 10/4/15.
  */
 // DOM element where the Timeline will be attached
+
+
 var container = document.getElementById('visualization');
-d3.json("/data/flare.json", function(error, data) {
+d3.json("/timeline", function(error, data) {
     console.log(data);
     handleResponse(data.timeline);
 });
@@ -24,8 +26,9 @@ function handleResponse(data){
     // Create a Timeline
     var timeline = new vis.Timeline(container, items, options);
     timeline.on('click', function(properties){
-        if($('.activity').find('.w_module')){
-            $('.w_module').remove();
+
+        if($('.hovergallery').find('.hoverimage')){
+            $('.hoverimage').remove();
         }
 
         //alert('clicked items: ' + JSON.stringify(properties));
@@ -34,9 +37,13 @@ function handleResponse(data){
         console.log(data[properties.item].picture);
 
         var picture = data[properties.item].picture;
-        $('.activity').append("<div class='w_module'><header><h1>" + +"</h1><header><div>");
-        $('.w_module').css('background', "url("+ picture+")");
-        $('.w_module').css('background-size', "100% auto");
+        var imageDetails = data[properties.item].imageDetails;
+        for(var j=0; j<picture.length ; j++) {
+            $('.hovergallery').append("<img class='hoverimage' src="+picture[j]+">");
+        }
+        //$('.hovergallery').css('background-color','#f8f8f8');
+        //$('.w_module').css('max-width', "100%");
+        //$('.w_module').css('max-height',"100%");
 
     });
 }
