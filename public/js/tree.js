@@ -22,7 +22,7 @@ var svg = d3.select(".svg_graph").append("svg")
 
 //Read the data from the mis element
 
-d3.json('/data/anotherdata.json', function(err, graph){
+d3.json('/findDonor', function(err, graph){
 //Creates the graph data structure out of the json data
     force.nodes(graph.nodes)
         .links(graph.links)
