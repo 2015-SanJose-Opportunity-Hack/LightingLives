@@ -9,17 +9,17 @@
   ],
   "timeline": [
     {
-      "picture": "pic1",
+      "picture": "/images/Graduation.jpg",
       "date": "09-01-2015",
       "note": "graduation"
     },
     {
-      "picture": "pic2",
+      "picture": "/images/Graduation_2.jpg",
       "date": "10-01-2015",
       "note": "elementary"
     },
     {
-      "picture": "pic3",
+      "picture": "/images/Graduation_7.jpeg",
       "date": "11-01-2015",
       "note": "elementary"
     }

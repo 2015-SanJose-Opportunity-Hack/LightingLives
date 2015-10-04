@@ -24,16 +24,19 @@ function handleResponse(data){
     // Create a Timeline
     var timeline = new vis.Timeline(container, items, options);
     timeline.on('click', function(properties){
-        if($('.activity').find('img')){
-            $('.activity img').remove();
+        if($('.activity').find('.w_module')){
+            $('.w_module').remove();
         }
 
         //alert('clicked items: ' + JSON.stringify(properties));
         console.log("properties :" , JSON.stringify(properties));
         console.log(JSON.stringify(data[properties.item]));
         console.log(data[properties.item].picture);
-        $('.activity').append("<img id='theImg' src='data[properties.item].picture'/>");
 
+        var picture = data[properties.item].picture;
+        $('.activity').append("<div class='w_module'><header><h1>" + +"</h1><header><div>");
+        $('.w_module').css('background', "url("+ picture+")");
+        $('.w_module').css('background-size', "100% auto");
 
     });
 }
