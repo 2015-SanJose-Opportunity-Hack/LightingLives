@@ -5,7 +5,7 @@ var Server = mongo.Server,
     BSON = mongo.BSONPure;
 
 
-var server = new Server('10.225.88.79', 27017, {auto_reconnect: true});
+var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('hackdb', server, {safe: true});
 
 db.open(function(err, db) {
@@ -44,6 +44,17 @@ exports.findKids = function(req, res) {
             res.end(JSON.stringify(doc));
         }
    });
+};
+exports.insertKids = function(req, res) {
+    console.log('nitain');
+    var cursor =db.collection('donors').find();
+    cursor.each(function(err, doc) {
+        if (doc != null) {
+            res.writeHead(200, { "Content-Type": "application/json" });
+            //var response = {'x':'2'};
+            res.end(JSON.stringify(doc));
+        }
+    });
+
 
 };
-
