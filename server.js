@@ -8,6 +8,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 var errorHandler = require('errorhandler');
+var findDonor = require('./routes/routes').findDonor;
 
 var app = express();
 
@@ -24,9 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.get('/', routes.index);
-
-
+app.get('/findDonor',  findDonor);
 
 
 var server = http.createServer(app);
