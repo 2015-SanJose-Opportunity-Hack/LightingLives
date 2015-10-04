@@ -1,0 +1,48 @@
+
+{
+  "name": "root",
+  "image": "/img/wula.png",
+  "children": [
+    {
+      "name": "region1",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "image": "/img/wula.png"
+        },
+        {
+          "name": "kids2",
+          "image": "/img/wula.png"
+        },
+        {
+          "name": "kids3",
+          "image": "/img/wula.png"
+        }
+      ]
+    },
+    {
+      "name": "region3",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "image": "/img/wula.png"
+        }
+      ]
+    },
+    {
+      "name": "region2",
+      "image": "/img/wula.png",
+      "children": [
+        {
+          "name": "kids1",
+          "image": "/img/wula.png"
+        },
+        { "name": "kids2",
+          "image": "/img/wula.png"
+        }
+      ]
+    }
+  ]
+}

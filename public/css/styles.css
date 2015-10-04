@@ -1,0 +1,189 @@
+body {
+    background-image: url('/img/nightysky.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-color: #003366;
+}
+
+
+.navbar {
+    background-color: #003366;
+    border-color: #003366;
+}
+
+.navbar-default .navbar-brand {
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover{
+    color: #FFD700;
+}
+
+.row {
+    margin-left: -55px;
+    margin-right: -55px;
+
+}
+
+.btn-admin {
+    margin-top: 20%;
+    height: 200px;
+    width: 100%;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node {
+    font: 10px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #999;
+    stroke-width: 1.5px;
+}
+
+.node:not(:hover) .nodetext {
+    display: none;
+    color: #000;
+}
+
+.details img {
+    width: 200px;
+    height: 200px;
+    border-image-width: 0;
+}
+.details h1{
+    color: #ffffff;
+}
+
+
+.vis-timeline {
+    border: 2px solid #000000;
+    font-family:  purisa, 'comic sans', cursive;
+    font-size: 12pt;
+    background: #CCFF99;
+}
+
+.vis-item {
+    border-color: #000000;
+    background-color: #33CC99;
+    font-size: 15pt;
+    color: #ffffff;
+    box-shadow: 5px 5px 20px rgba(128,128,128, 0.5);
+}
+
+.vis-item,
+.vis-item.vis-line {
+    border-width: 3px;
+}
+
+.vis-item.vis-dot {
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+.vis-item.vis-selected {
+    border-color: #000000;
+    background-color: #006633;
+}
+
+.vis-time-axis .vis-text {
+    color: purple;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.vis-time-axis .vis-text.vis-major {
+    font-weight: bold;
+}
+
+.vis-time-axis .vis-grid.vis-minor {
+    border-width: 2px;
+    border-color: #000000;
+}
+
+.vis-time-axis .vis-grid.vis-major {
+    border-width: 2px;
+    border-color: #000000;
+}
+
+.vis-current-time {
+    width: 7px;
+}
+
+.w_module {
+    background: url("") no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    width: 800px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 180px;
+    margin-top: 20px;
+}
+.w_module > header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: inherit;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.w_module > header::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: inherit;
+    background-attachment: fixed;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+.w_module > header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25)
+}
+.module > header > h1 {
+    margin: 0;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

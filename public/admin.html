@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Enter the kid information</h2>
+    <form role="form" id="submitKids" class="kidsData">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="biography">Biography:</label>
+            <input type="text" class="form-control" id="biography" placeholder="Enter biography">
+        </div>
+        <div class="form-group">
+            <label for="region">Region:</label>
+            <input type="text" class="form-control" id="region" placeholder="Enter region">
+        </div>
+        <div class="form-group">
+            <label for="donor">Donor:</label>
+            <input type="donor" class="form-control" id="donor" placeholder="Enter name of the donor">
+        </div>
+        <div class="form-group">
+            <label for="picNote">Description:</label>
+            <input type="picNote" class="form-control" id="picNote" placeholder="Enter Description of the Picture">
+        </div>
+        <div class="form-group">
+            <label for="picDate">Enter the Date of the Pic</label>
+            <input type="picDate" class="form-control" id="picDate" placeholder="MM-DD-YYYY">
+        </div>
+
+        <span class="btn btn-default btn-file">
+                 <input type="file">
+        </span>
+        <button id = "submit" type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+//    var data = {
+//        "_id": "kid5",
+//        "name": "kid1",
+//        "region": "NA",
+//        "donors": [
+//            {
+//                "donor": "rakesh"
+//            },
+//            {
+//                "donor": "nitish"
+//            }
+//        ],
+//        "timeline": [
+//            {
+//                "picture": "pic1",
+//                "date": "09-01-2015",
+//                "note": "graduation"
+//            },
+//            {
+//                "picture": "pic2",
+//                "date": "10-01-2015",
+//                "note": "high school"
+//            },
+//            {
+//                "picture": "pic3",
+//                "date": "11-01-2015",
+//                "note": "elementary"
+//            }
+//        ]
+//    }
+
+
+//$(document).ready(function(){
+    $("#submitKids").submit(function(e){
+        //console.log( "submit :", $( this ).serializeArray() );
+        e.preventDefault();
+        console.log("rakesh");
+        var name = $("#name").val();
+        console.log("name :", name);
+        var region = $("#region").val();
+        var note = $("#biography").val();
+        var donor = $("#donor").val();
+        var picDate = $("#picDate").val();
+        var picNote = $("#picNote").val();
+        //var data = $( this ).serializeArray();
+
+            $.ajax({
+                data: {
+                    "_id": name,
+                    "name": name,
+                    "region": region,
+                    "donors": [
+                        {
+                            "donor": donor
+                        }
+                    ],
+                    "timeline": [
+                        {
+                            "picture": "pic1",
+                            "date": picDate,
+                            "note": picNote
+                        }
+                    ]
+                },
+                url: 'http://localhost:3000/insertKids',
+                type: 'POST',
+                dataType: 'json',
+                //jsonpCallback: 'callback', // this is not relevant to the POST anymore
+                success: function (data) {
+                    console.log('process sucess : ', data);
+                }
+
+            });
+    });
+//});
+
+</script>
