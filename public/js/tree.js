@@ -45,16 +45,16 @@ d3.json('/findDonor', function(err, graph){
         .call(force.drag);
 
     node.append("svg:image")
-        .attr("xlink:href", function(d){return d.image;
-        })
+        .attr("xlink:href", function(d){return d.image;})
         .attr("x", "-25px")
         .attr("y", "-25px")
         .attr("width", "50px")
         .attr("height", "50px")
         .on("mouseover", function(d){
             if(d.label!=='root'){
-                $(".details img").attr("src", "/img/rounded_corners.png");
-                $(".details h1").text("Hello");
+                console.log("wulala", d);
+                $(".details img").attr("src", d.hover_image);
+                $(".details h1").text(d.name);
             }
         }).on("mouseout", function(d){
             if(d.label!=='root') {
