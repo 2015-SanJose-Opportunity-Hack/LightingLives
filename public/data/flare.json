@@ -9,19 +9,22 @@
   ],
   "timeline": [
     {
-      "picture": "/images/Graduation.jpg",
+      "picture": ["/images/Graduation_8.jpg","/images/Graduation_9.jpg","/images/Graduation_10.jpg"],
+      "imageDetails":["Auditorium Picture","Bring Your Kids Celebration","Class Picture"],
       "date": "09-01-2015",
-      "note": "graduation"
+      "note": "Elementary"
     },
     {
-      "picture": "/images/Graduation_2.jpg",
+      "picture": ["/images/Graduation_8.jpg","/images/Graduation_9.jpg","/images/Graduation_10.jpg"],
+      "imageDetails":["Auditorium Picture","Bring Your Kids Celebration","Class Picture"],
       "date": "10-01-2015",
-      "note": "elementary"
+      "note": "Middle School"
     },
     {
-      "picture": "/images/Graduation_7.jpeg",
+      "picture": ["/images/Graduation_8.jpg","/images/Graduation_9.jpg","/images/Graduation_10.jpg"],
+      "imageDetails":["Auditorium Picture","Bring Your Kids Celebration","Class Picture"],
       "date": "11-01-2015",
-      "note": "elementary"
+      "note": "Graduation"
     }
   ]
 }
