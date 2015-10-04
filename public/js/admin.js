@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#submitKids").submit(function(e){
+    $("#submitKidsForm").submit(function(e){
         //console.log( "submit :", $( this ).serializeArray() );
         e.preventDefault();
         console.log("rakesh");

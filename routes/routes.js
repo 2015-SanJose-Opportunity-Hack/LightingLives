@@ -220,7 +220,8 @@ exports.insertKids = function(req, res) {
                         nodes : {
                             "name": req.body.region,
                             "label": regionIndex,
-                            "image": "/images/region4.png",
+                            "image": "/img/house.png",
+                            "hover_image": "/images/region4.png",
                             "group": 7
                         },
                         links : {
@@ -242,7 +243,8 @@ exports.insertKids = function(req, res) {
                     nodes : {
                         "name": req.body.name,
                         "label": kidIndex,
-                        "image": 'images/kid8.png',
+                        "image": "/img/star.gif",
+                        "hover_image": 'images/kid8.png',
                         "group": 7
                     },
                     links : {
