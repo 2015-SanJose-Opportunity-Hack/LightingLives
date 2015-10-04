@@ -5,7 +5,7 @@
 
 
 var container = document.getElementById('visualization');
-d3.json("/data/flare.json", function(error, data) {
+d3.json("/timeline", function(error, data) {
     console.log(data);
     handleResponse(data.timeline);
 });
