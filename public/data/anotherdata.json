@@ -6,52 +6,52 @@
     "group": 1
   }, {
     "name": "region1",
-    "label": "s1",
+    "label": "1",
     "image": "/img/house.png",
     "group": 2
   },{
     "name": "kids1",
-    "label": "s2",
+    "label": "2",
     "image": "/img/star.gif",
     "group": 3
   }, {
     "name": "kids2",
-    "label": "s3",
+    "label": "3",
     "image": "/img/star.gif",
     "group": 3
   }, {
     "name": "region2",
-    "label": "s4",
+    "label": "4",
     "image": "/img/house.png",
     "group": 4
   }, {
     "name": "kids3",
-    "label": "s5",
+    "label": "5",
     "image": "/img/star.gif",
     "group": 5
   }, {
     "name": "kids4",
-    "label": "s6",
+    "label": "6",
     "image": "/img/star.gif",
     "group": 5
   }, {
     "name": "region3",
-    "label": "s7",
+    "label": "7",
     "image": "/img/house.png",
     "group": 6
   }, {
     "name": "kids5",
-    "label": "s8",
+    "label": "8",
     "image": "/img/star.gif",
     "group": 7
   }, {
     "name": "kids6",
-    "label": "s9",
+    "label": "9",
     "image": "/img/star.gif",
     "group": 7
   }, {
     "name": "kids7",
-    "label": "s10",
+    "label": "10",
     "image": "/img/star.gif",
     "group": 7
   }],
