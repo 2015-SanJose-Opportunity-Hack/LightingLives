@@ -4,10 +4,16 @@ A lot of people who donate to Non Profits would like to see how they're affectin
 
 We're trying to provide a solution which does the above in the form of a lighting up sky.
 
-![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/AdminOptions.png)
-![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/CoordinatorAddChildPage.png)
-![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/CoordinatorAddRegionPage.png)
+<ul>HomePage</ul>
+
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/HomePage.png)
+<ul>Admin Page</ul>
+![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/AdminOptions.png)
+<ul>Coordinator Add CHild Page</ul>
+
+![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/CoordinatorAddChildPage.png)
+
+![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/CoordinatorAddRegionPage.png)
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/KidsBionONHomePage.png)
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/KidsTimeLinePictures.png)
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/RegionBionOnHomePage.png)
