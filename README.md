@@ -12,8 +12,15 @@ We're trying to provide a solution which does the above in the form of a lightin
 <ul>Coordinator Add CHild Page</ul>
 
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/CoordinatorAddChildPage.png)
+<ul>Coordinator Add CHild Page</ul>
 
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/CoordinatorAddRegionPage.png)
+<ul>Home Page with Child bio on the Page</ul>
+
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/KidsBionONHomePage.png)
+<ul>Child timeline with pictures</ul>
+
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/KidsTimeLinePictures.png)
+<ul>Orphanage home or region bio on the Page</ul>
+
 ![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/blob/master/screenshots/RegionBionOnHomePage.png)
