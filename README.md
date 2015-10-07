@@ -4,4 +4,4 @@ A lot of people who donate to Non Profits would like to see how they're affectin
 
 We're trying to provide a solution which does the above in the form of a lighting up tree.
 
-![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/screenshots/AdminOptions.png)
+![alt tag](https://github.com/Opportunity-Hack-2015-SanJose/LightingLives/master/screenshots/AdminOptions.png)
